@@ -1,0 +1,3 @@
+Element found in 4 comparisons.
+Element found in 3 comparisons.
+Element not found
