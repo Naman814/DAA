@@ -1,10 +1,11 @@
 #include <iostream>
 using namespace std;
 
-int binary_search(int a[], int low, int high, int val)
+int binary_search(int a[], int low, int high, int val,int &comparisons)
 {
     while (low <= high)
     {
+        comparisons++;
         int mid = (high + low) / 2;
         if (a[mid] == val)
         {
@@ -25,6 +26,9 @@ int binary_search(int a[], int low, int high, int val)
 
 int main()
 {
+    int t;
+    cin>>t;
+    while(t--){
     int n;
     cin >> n;
     int a[n];
@@ -34,14 +38,16 @@ int main()
     }
     int val;
     cin >> val;
-    int pos = binary_search(a, 0, n - 1, val);
+    int comparisons=0;
+    int pos = binary_search(a, 0, n - 1, val,comparisons);
     if (pos >= 0)
     {
-        cout << "Element found at position : " << pos;
+        cout << "Present "<<comparisons<<"\n";
     }
     else
     {
-        cout << "Element not found.";
+        cout << "Not Present "<<comparisons<<"\n";
+    }
     }
     return 0;
 }

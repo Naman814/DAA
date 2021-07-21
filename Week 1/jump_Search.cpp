@@ -43,14 +43,14 @@ int main()
         }
         int val;
         cin >> val;
-        int jumps=0;
+        int jumps=1;
         if (jump_search(a, n, val,jumps))
         {
-            cout << "Element found in " << jumps << " jumps"<<"\n";
+            cout << "Present " << jumps<<"\n";
         }
         else
         {
-            cout << "Element not found"<<"\n";
+            cout << "Not Present "<<jumps<<"\n";
         }
     }
 

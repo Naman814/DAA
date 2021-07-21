@@ -16,9 +16,6 @@ bool linear_search(int a[], int n, int k, int &compare_count)
 int main()
 {
 
-    freopen("input1.txt", "r", stdin);
-    freopen("output1.txt", "w", stdout);
-
     int t;
     cin >> t;
     while (t--)
