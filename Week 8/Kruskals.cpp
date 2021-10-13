@@ -53,7 +53,7 @@ int main()
     for (int i = 0; i < e; i++)
     {
         int x, y, z;
-        cin >> x >> y >> z;
+        cin >> x >> y >> z;  // weight , source , destination
         arr.push_back(edge(x, y, z));
     }
     sort(arr.begin(), arr.end(), cmp);
