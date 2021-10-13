@@ -44,9 +44,9 @@ void Prims(vector<vector<int>> &g, int v)
 
 int main()
 {
+	
 	int v, e;
-	cout << "Enter vertices and edges";
-	cout << endl;
+	cout << "Enter vertices and edges : ";
 	cin >> v >> e;
     // 7 11
     // 0 2 7
