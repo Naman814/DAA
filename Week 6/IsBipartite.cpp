@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool bfs(vector<vector<int> > g, int v)
+bool bfs(vector<vector<int> > g, int v, vector<int> &color)
 {
-    vector<int> color(v, -1);
+
     queue<int> q;
     q.push(0);
     color[v] = 1;
@@ -43,7 +43,18 @@ int main()
         g[x][y] = 1;
         g[y][x] = 1;
     }
-    if (bfs(g, v))
+    bool flag=true;
+    vector<int> color(v, -1);
+    for(int i=0;i<v;i++){
+        if(color[i]==-1){
+           if(bfs(g, i, color)==false){
+               flag=false;
+               break;
+           }
+        }
+    }
+    
+    if (flag)
     {
         cout << "Yes Barpartite";
     }
