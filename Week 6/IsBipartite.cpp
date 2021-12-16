@@ -3,10 +3,9 @@ using namespace std;
 
 bool bfs(vector<vector<int> > g, int v, vector<int> &color)
 {
-
+     color[v] = 1;
     queue<int> q;
-    q.push(0);
-    color[v] = 1;
+    q.push(v);
     while (!q.empty())
     {
         int temp = q.front();
